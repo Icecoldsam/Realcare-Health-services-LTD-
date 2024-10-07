@@ -31,21 +31,26 @@ faders.forEach(fader => {
     appearOnScroll.observe(fader);
 });
 
+
 // Pop-up Modal for Contact Section
-const modal = document.querySelector('.modal');
-const openModalBtn = document.querySelector('.cta-button');
-const closeModalBtn = document.querySelector('.close-modal');
+const modal = document.querySelector('.modal'); // The modal for contact form
+const openModalBtn = document.querySelector('.get-in-touch'); // Get in Touch button
+const closeModalBtn = document.querySelector('.close-modal'); // Close button in the modal
 
-openModalBtn.addEventListener('click', function() {
-    modal.style.display = 'card';
+// Open modal when "Get in Touch" button is clicked
+openModalBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+    modal.style.display = 'block'; // Show the modal
 });
 
+// Close modal when close button is clicked
 closeModalBtn.addEventListener('click', function() {
-    modal.style.display = 'block';
+    modal.style.display = 'none'; // Hide the modal
 });
 
+// Close modal when clicking outside the modal
 window.addEventListener('click', function(e) {
     if (e.target === modal) {
-        modal.style.display = 'none';
+        modal.style.display = 'none'; // Hide the modal
     }
 });

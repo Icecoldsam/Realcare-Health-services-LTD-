@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f4f4f9;
+    background-color: #ffff00;
     line-height: 1.6;
     overflow-x: hidden; /* Prevent horizontal scroll */
 }
@@ -21,7 +21,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
+    background-color: #00ff1a;
     padding: 15px 20px; /* Adjust padding for mobile */
     width: 100%;
     z-index: 100;
@@ -55,7 +55,7 @@ nav ul li a:hover {
 /* CTA Button */
 .cta-button {
     background-color: #ff5722;
-    color: white;
+    color:rgb(255, 255, 255);
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: bold;
@@ -81,7 +81,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero h1 {
-    color: #09ff00; /* Change the color for the heading */
+    color: #ffffff; /* Change the color for the heading */
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
