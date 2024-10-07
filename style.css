@@ -1,0 +1,271 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styling */
+.sticky-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff;
+    padding: 15px 20px; /* Adjust padding for mobile */
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px; /* Responsive logo size */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between nav items */
+}
+
+nav ul li {
+    margin: 0; /* Removed margin */
+}
+
+nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #0056b3; /* Background color on hover */
+}
+
+/* CTA Button */
+.cta-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url("images/playing.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px; /* Adjust padding for mobile */
+    position: relative;
+    height: 90vh; /* Full viewport height */
+}
+
+/* Hero Section */
+.hero h1 {
+    color: #09ff00; /* Change the color for the heading */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #ffffff; /* Change the color for the paragraph */
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .cta-button {
+    background-color: #007bff;
+    color: #ffffff; /* Change the text color of the button */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.hero .cta-button:hover {
+    background-color: #0056b3; /* Background color when hovered */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Services Section */
+.services {
+    background-color: #fff;
+    padding: 30px 10px; /* Adjust padding for mobile */
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem; /* Responsive heading */
+    margin-bottom: 20px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #f8f8f8;
+    padding: 15px; /* Adjust padding for mobile */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img {
+    width: 100%; /* Responsive image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #e9ecef;
+    padding: 30px 10px; /* Adjust padding for mobile */
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 10px; /* Adjust padding for mobile */
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .sticky-header {
+        flex-direction: column;
+        padding: 10px 15px; /* Adjust padding for mobile */
+    }
+
+    .cta-button {
+        margin-top: 10px; /* Space above the button */
+    }
+
+    .hero {
+        padding: 100px 10px; /* Adjust padding for mobile */
+    }
+
+    .services, .testimonials {
+        padding: 40px 10px; /* More padding for sections */
+    }
+}
+
+.hidden {
+    display: none; /* Hide the content by default */
+}
+
+/* Optional styles for the button */
+#about-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#about-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-modal {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.card {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-img {
+    width: 80px; /* Adjust the width of the image */
+    height: auto; /* Keeps the aspect ratio intact */
+    margin-top: 20px; /* Space between content and image */
+    align-self: center; /* Centers the image horizontally */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
